@@ -7,7 +7,7 @@ https://blog.roboflow.ai/training-yolov4-on-a-custom-dataset/
 After Installation
 Place Distance.py file and Input Folder in darknet folder
 
-CHange directory in terminal to darknet folder
+Change directory in terminal to darknet folder
 
 Run Python Distance.py
 
