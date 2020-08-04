@@ -7,6 +7,7 @@ import numpy as np
 import time
 import darknet
 from itertools import combinations
+import sys
 
 height1 = 0
 height2 = 0
@@ -247,16 +248,16 @@ def YOLO():
         except Exception:
             pass
     #cap = cv2.VideoCapture(0)
-    cap = cv2.VideoCapture("./Input/test.mp4")
+    cap = cv2.VideoCapture(sys.argv[1])
     frame_width = int(cap.get(3))
     frame_height = int(cap.get(4))
     new_height, new_width = frame_height // 2, frame_width // 2
     # print("Video Reolution: ",(width, height))
 
     out = cv2.VideoWriter(
-            "./Demo/test5_output.avi", cv2.VideoWriter_fourcc(*"MJPG"), 10.0,
+            "output.avi", cv2.VideoWriter_fourcc(*"MJPG"), 10.0,
             (new_width, new_height))
-    
+
     # print("Starting the YOLO loop...")
 
     # Create an image we reuse for each detect
