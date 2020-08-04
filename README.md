@@ -7,9 +7,13 @@ https://blog.roboflow.ai/training-yolov4-on-a-custom-dataset/
 After Installation
 Place Distance.py file and Input Folder in darknet folder
 
-Change directory in terminal to darknet folder
+```console
+cd darknet
+```
 
-Run Python Distance.py
+Then run code as so
+```console
+python Distance.py ./Input/test.mp4
+```
 
-To change test video add video to input folder
- and rename "test.mp4"
+To test on custom video add video to input folder replace './Input/test.mp4' with your video path and run
