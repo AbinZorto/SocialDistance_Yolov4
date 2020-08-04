@@ -77,39 +77,6 @@ def closest_value(list1, ht):
     return minvalue
 
 ##################################################
- 
-'''
-Not Using
-##########################################################
-def is_within(pt1, pt2, ht):
-  bad = ()
-  dx = (pt1[0] - pt2[0])
-  dy = (pt1[1] - pt2[1])
-  if is_close(dx,dy) <= ht and is_close(dx,dy) != 0:
-    bad = (pt1,pt2)
-  return bad
-
-def in_trouble(list1, ht):
-  list2 = list1.copy()
-  list3 = []
-  list4 = []
-  for i in range(len(list1)):
-    for j in range(len(list2)):
-        pt1 = list1[i]
-        pt2 = list2[j]
-
-        #if i != j:
-        distance = is_within(pt1,pt2,ht)
-        if distance != () and distance[0] not in list3 and distance[1] not in list3:
-          list3.append(distance[0])
-          list3.append(distance[1])
-  list4 = list3
-  list5 = []
-  for k in range(len(list4)):
-    list5.append(list1.index(list4[k]))
-  return list5
-###########################################################
-'''
 
 def convertBack(x, y, w, h): 
     #================================================================
@@ -185,17 +152,6 @@ def cvDrawBoxes(detections, img):
                     cv2.putText(img, 'danger', (box_[2], box_[1]), cv2.FONT_HERSHEY_SIMPLEX, 0.3,
                         [255, 0, 0], 1)
                     cv2.line(img, start_point, end_point, (255, 0, 0), 1)
-
-            
-            '''
-            #trouble = in_trouble(list(centroid_dict.values()), height1)
-
-        #for i in trouble:
-        #    box__ = (list(centroid_dict.values())[i])
-        #    cv2.rectangle(img, (box__[2], box__[3]), (box__[4], box__[5]), (255, 0, 0), 1)
-        #    cv2.putText(img, 'danger', (box__[2], box__[1]), cv2.FONT_HERSHEY_SIMPLEX, 0.3,
-        #            [255, 0, 0], 1)
-        '''
 
     return img
 
