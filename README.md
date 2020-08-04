@@ -18,4 +18,4 @@ python Distance.py ./Input/test.mp4
 
 To test on custom video add video to input folder replace './Input/test.mp4' with your video path and run
 
-# Video Example
+![alt text](https://github.com/AbinZorto/SocialDistance_Yolov4/blob/master/output.gif)
